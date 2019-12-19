@@ -30,6 +30,7 @@
 			} else {
 				let xhttp = new XMLHttpRequest();
 				xhttp.open("GET", this.APIAddress + resource, true);
+				xhttp.setRequestHeader("Authorization", this.APIkey)
 				xhttp.send();
 				return await new Promise(function(resolve, reject) {
 					xhttp.onreadystatechange = function() {
@@ -95,6 +96,7 @@
 			} else {
 				let xhttp = new XMLHttpRequest();
 				xhttp.open("DELETE", this.APIAddress + resource, true);
+				xhttp.setRequestHeader("Authorization", this.APIkey)
 				xhttp.send();
 				return await new Promise(function(resolve, reject) {
 					xhttp.onreadystatechange = function() {
