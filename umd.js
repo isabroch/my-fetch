@@ -88,10 +88,8 @@
 					method: "DELETE"
 				});
 	
-				return await new Promise(function(resolve, reject) {
-					resolve(response.status);
-				});
-
+				return await response.status;
+				
 			} else {
 				let xhttp = new XMLHttpRequest();
 				xhttp.open("DELETE", this.APIAddress + resource, true);
